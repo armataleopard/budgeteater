@@ -1,0 +1,64 @@
+Project: BUDGETEATER — Meme Token Website (Corruption-Aesthetic Edition)
+
+Overview:
+Create a premium-looking, satirical website for the meme token "BudgetEater" ($BRB), themed around corruption, budget holes, tenders, suitcases of cash, and Excel-based fraud. The site should feel like a polished criminal satire — luxurious, ironic, and animated.
+
+Design Aesthetic:
+- High-end, sarcastic corporate criminal style
+- Color palette: deep navy, gold accents, crimson details, Excel green touches
+- Glitchy effects, animated shadows, money particles, burning documents, etc.
+- Layout should not follow typical “sections,” instead — make it chaotic, like a hacked website
+
+Structure:
+1. Hero Section (fullscreen)
+   - Large TITLE: "BUDGETEATER"
+   - Subtitle below: “LAUNCHING AT PUMP.FUN 28 MAY”
+   - Glitchy animation of the text on hover
+   - Interactive Excel cells floating around
+   - Background: tropical luxury + budget documents on fire
+
+2. Hover Cursor
+   - Replace default cursor with a small suitcase or kotleta icon
+   - On hover over titles or buttons, animate a green flash or Excel tooltip popup
+
+3. Interactive Section: “THE TENDER FILES”
+   - 5 corrupt stories scrollable horizontally (see below)
+   - Each story in an animated retro tender PDF card design
+   - Stories appear with stamp-animation: “APPROVED”
+
+4. Hidden Expense Game (Optional)
+   - A fake budget Excel appears, user clicks to uncover hidden bribes
+   - Clicking wrong cell triggers explosion effect + popup “BRB on Business Trip”
+
+5. Footer Zone
+   - Dark, with a broken seal of “Transparency Agency” and flickering lights
+   - Links to Twitter, YouTube (optional, currently omitted)
+   - Disclaimer in meme style: “This is not financial advice. This is forensic comedy.”
+
+Animations:
+- Mouse movement influences document drift in background
+- Excel sheet sparkles randomly in sidebar
+- Hover on story cards triggers tender stamp & money sound
+
+Corrupt Stories (For “The Tender Files” Section):
+
+1. “The Palm Tree Fiber Optics Incident”  
+The government allocated $8 million for “rural internet installation using sustainable palm tree fibers.” The tender was won by a seafood import company. Their final report included a picture of a crab holding a LAN cable. Nobody objected. The internet remains unchanged.
+
+2. “The Kotleta Consulting Group”  
+A consultancy called “KCG” received $12.4M to research meatball efficiency for school lunches. Their final report was 3 pages, half of which were memes. They cited a TikTok and charged $180,000 for "team lunches." Every invoice was paid within 24 hours.
+
+3. “The Yacht-as-a-Service Project”  
+An ambitious “mobile sea office” initiative was funded to “bring innovation closer to the ocean.” The office? A luxury yacht with no Wi-Fi. It sank during the kick-off party. The CEO said: “We were just trying to think outside the budget.”
+
+4. “Public Transparency Initiative”  
+To improve visibility into spending, $5M was spent on a website that only displayed “Access Denied” upon loading. The devs claimed this was a metaphor for systemic obfuscation. It won a design award.
+
+5. “The Excel Prophet”  
+An anonymous freelancer named “ExcelGod420” was hired to forecast national budget trends. He charged $4.2M for a single sheet where every formula linked back to his OnlyFans. Despite the odd setup, his predictions were 98% accurate. He disappeared with the money.
+
+Deliverables:
+- Responsive HTML/CSS/JS frontend
+- All assets optimized for web
+- Animations done using GSAP or Framer Motion
+- Fonts: modern serif + monospace combo

@@ -1,0 +1,738 @@
+/* Global Styles */
+:root {
+    --navy: #0a192f;
+    --gold: #ffd700;
+    --crimson: #dc143c;
+    --excel-green: #1d6f42;
+    --text-color: #ffffff;
+    --font-serif: 'Playfair Display', serif;
+    --font-mono: 'Space Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23ffd700"><path d="M20 6h-16c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm0 10h-16v-8h16v8z"/></svg>') 12 12, auto;
+}
+
+body {
+    background-color: var(--navy);
+    color: var(--text-color);
+    font-family: var(--font-serif);
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+.money-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.burning-documents {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    height: 30%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('banner.png');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+}
+
+.glitch-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.glitch-title {
+    font-size: 8vw;
+    font-weight: 900;
+    color: var(--text-color);
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    animation: glitch 1s infinite;
+    letter-spacing: 0.2em;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    15% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                    0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                    -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                    0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                    -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    50% {
+        text-shadow: 0.05em 0.05em 0 rgba(255, 0, 0, 0.75),
+                    0.05em 0 0 rgba(0, 255, 0, 0.75),
+                    0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    99% {
+        text-shadow: 0.05em 0.05em 0 rgba(255, 0, 0, 0.75),
+                    0.05em 0 0 rgba(0, 255, 0, 0.75),
+                    0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    100% {
+        text-shadow: -0.05em 0 0 rgba(255, 0, 0, 0.75),
+                    -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+                    -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-family: var(--font-mono);
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+}
+
+.excel-cells {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--gold);
+    text-align: center;
+    letter-spacing: 0.2em;
+    position: relative;
+    padding-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background-color: var(--crimson);
+    box-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+}
+
+.section-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Tender Files Section */
+.tender-files {
+    padding: 8rem 0;
+    background-color: rgba(10, 25, 47, 0.95);
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) inset;
+}
+
+.tender-files::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><rect width="15" height="15" fill="%23ffffff" fill-opacity="0.02"/><rect x="15" y="15" width="15" height="15" fill="%23ffffff" fill-opacity="0.02"/></svg>');
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.tender-files::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(10, 25, 47, 0) 0%, rgba(10, 25, 47, 0.8) 70%);
+    z-index: -1;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-header::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0) 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--gold);
+    text-align: center;
+    letter-spacing: 0.2em;
+    position: relative;
+    padding-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background-color: var(--crimson);
+    box-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+}
+
+.section-subtitle {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    color: var(--crimson);
+    letter-spacing: 0.1em;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.tender-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    gap: 3rem;
+    padding: 3rem 0;
+    scroll-snap-type: x mandatory;
+    max-width: 1600px;
+    margin: 0 auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) var(--navy);
+    padding-bottom: 20px;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.tender-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tender-container::-webkit-scrollbar-track {
+    background: rgba(10, 25, 47, 0.5);
+    border-radius: 4px;
+}
+
+.tender-container::-webkit-scrollbar-thumb {
+    background-color: var(--gold);
+    border-radius: 4px;
+    border: 2px solid var(--navy);
+}
+
+.tender-card {
+    min-width: 320px;
+    height: 420px;
+    perspective: 1500px;
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tender-card:hover {
+    transform: translateY(-15px);
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+}
+
+.tender-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tender-card:hover .tender-inner {
+    transform: rotateY(180deg);
+}
+
+.tender-front, .tender-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    background: linear-gradient(145deg, #1e3c72, #2a5298);
+    border: 3px solid var(--gold);
+    border-radius: 10px;
+    box-shadow: inset 0 0 30px rgba(255, 215, 0, 0.15);
+    overflow: hidden;
+}
+
+.tender-front::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    pointer-events: none;
+    border-radius: 5px;
+}
+
+.tender-front::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0) 50%);
+    pointer-events: none;
+}
+
+.tender-front h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: var(--font-mono);
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, #ffffff, #ffd700 50%, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.tender-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(145deg, #2a5298, #1e3c72);
+    overflow-y: auto;
+    padding: 3rem;
+}
+
+.tender-back p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.stamp {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    color: var(--crimson);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    border: 2px solid var(--crimson);
+    padding: 0.6rem 1.2rem;
+    transform: rotate(-15deg);
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: rgba(220, 20, 60, 0.15);
+    box-shadow: 0 0 15px rgba(220, 20, 60, 0.4);
+    z-index: 10;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+}
+
+.tender-card:hover .stamp {
+    transform: rotate(-5deg) scale(1.15);
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.6);
+}
+
+/* Hidden Expense Game */
+.hidden-expense {
+    padding: 6rem 2rem;
+    background-color: rgba(10, 25, 47, 0.9);
+    position: relative;
+}
+
+.excel-game {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    border: 2px solid var(--excel-green);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow-x: auto;
+}
+
+.excel-header, .excel-row {
+    display: flex;
+}
+
+.excel-cell {
+    min-width: 120px;
+    height: 40px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    font-family: var(--font-mono);
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.excel-cell.header {
+    background-color: var(--excel-green);
+    color: white;
+    font-weight: bold;
+}
+
+.excel-cell:hover {
+    background-color: #e0e0e0;
+}
+
+.excel-cell.bribe {
+    position: relative;
+}
+
+.excel-cell.bribe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.popup.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popup-content {
+    background-color: var(--navy);
+    padding: 2rem;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    border: 2px solid var(--gold);
+    position: relative;
+}
+
+.popup-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--crimson);
+}
+
+.popup-content p {
+    margin-bottom: 1.5rem;
+}
+
+.close-popup {
+    background-color: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.close-popup:hover {
+    background-color: var(--crimson);
+    color: white;
+}
+
+/* Footer */
+footer {
+    padding: 4rem 2rem;
+    background-color: rgba(5, 15, 30, 0.95);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.broken-seal {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.seal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.7;
+}
+
+.crack {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 3px;
+    background-color: var(--crimson);
+    transform: translateX(-50%) rotate(15deg);
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    color: var(--gold);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    transition: all 0.2s;
+}
+
+.social-link:hover {
+    color: var(--crimson);
+    text-decoration: underline;
+}
+
+.disclaimer {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .glitch-title {
+        font-size: 12vw;
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .tender-container {
+        padding: 1rem 0;
+    }
+    
+    .tender-card {
+        min-width: 250px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glitch-title {
+        font-size: 14vw;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .tender-card {
+        min-width: 220px;
+        height: 300px;
+    }
+    
+    .excel-cell {
+        min-width: 100px;
+        font-size: 0.9rem;
+    }
+}
+
+.card-number {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(255, 215, 0, 0.5);
+    line-height: 1;
+}
+
+.tender-amount {
+    position: absolute;
+    bottom: 5rem;
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.tender-footer {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tender-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 2rem;
+    position: relative;
+}
+
+.tender-nav::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 215, 0, 0), rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0));
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tender-nav-arrow {
+    font-size: 2rem;
+    color: var(--gold);
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    background-color: rgba(10, 25, 47, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.tender-nav-arrow:hover {
+    background-color: rgba(255, 215, 0, 0.15);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.tender-nav-dots {
+    display: flex;
+    gap: 0.8rem;
+    background-color: rgba(10, 25, 47, 0.5);
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.dot.active {
+    background-color: var(--gold);
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+} 
